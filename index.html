@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <style>
+        :root {
+            font-family: Arial, sans-serif;
+            color: #1f2937;
+            background: #eef2ff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            margin: 0;
+            place-items: center;
+            background: linear-gradient(135deg, #eef2ff, #dbeafe);
+        }
+
+        .login-card {
+            width: min(90%, 400px);
+            padding: 40px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(30, 64, 175, 0.15);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+
+        .subtitle {
+            margin: 0 0 28px;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 7px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: 3px solid #bfdbfe;
+            border-color: #2563eb;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px 0 24px;
+            font-size: 0.9rem;
+        }
+
+        .options label {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .options input { width: auto; }
+
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: 0;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        button:hover { background: #1d4ed8; }
+
+        .signup {
+            margin: 24px 0 0;
+            color: #6b7280;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <main class="login-card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Sign in to continue to your account</p>
+        <form>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required>
+
+            <div class="options">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit">Sign in</button>
+        </form>
+        <p class="signup">Don't have an account? <a href="#">Create one</a></p>
+    </main>
 </body>
 </html>
